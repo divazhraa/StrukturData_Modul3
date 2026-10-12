@@ -4,20 +4,15 @@
 ## Unguided 
 
 # Dasar Teori
-## A.	Array
-###     Array merupakan kumpulan data dengan nama yang sama dan setiap elemen bertipe data sama. Untuk mengakses setiap komponen / elemen array berdasarkan indeks dari setiap elemen. 
+## A.	Abstract Data Type (ADT)
+###     Abstract Data Type (ADT) adalah definisi statik yang mencakup sebuah tipe data (TYPE) beserta sekumpulan operasi dasar atau primitif yang dapat memanipulasi tipe data tersebut. ADT yang terstruktur dan lengkap biasanya juga menyertakan definisi invarian dari tipe dan aksioma-aksioma terkait. Sebuah definisi ADT dapat bersifat kompleks, artinya di dalamnya dapat memuat definisi dari ADT lain (contohnya, ADT SEGI4 dapat dibentuk dari dua buah ADT POINT).
 
-## B.	Pointer dan Alamat Memori
-###     Pointer adalah variabel khusus yang berisi nilai integer dalam format heksadesimal untuk menyimpan alamat memori dari variabel lain. Karena semua data program komputer disimpan dalam sel memori yang memiliki alamat unik, pointer memungkinkan program untuk langsung menunjuk dan mengakses nilai dari variabel di alamat tersebut. Pointer juga dapat digunakan untuk mengakses elemen pada array maupun karakter pada string.
+## B.	Implementasi Modular pada ADT
+###     Dalam standar software engineering, ADT diimplementasikan menggunakan arsitektur modular yang memecah program menjadi tiga file utama, yaitu:
+###     1. Berkas Header (.h): Memuat deklarasi atau spesifikasi tipe struct serta bentuk prototipe (header) dari primitif (fungsi dan prosedur) tanpa menjabarkan isi prosesnya.   
+###     2. Berkas Body/Realisasi (.cpp): Memuat implementasi kode murni (body) dari primitif fungsi/prosedur yang telah dideklarasikan di bagian header.   
+###     3. Berkas Program Utama/Driver (main.cpp): Merupakan antarmuka utama program yang dipanggil oleh sistem (memuat fungsi int main()) untuk menggunakan tipe data bentukan tersebut.
 
-## C.	Fungsi
-###     Fungsi merupakan blok dari kode yang dirancang untuk melaksanakan tugas khusus dengan tujuan membuat program lebih terstruktur, mudah dipahami, dan menghindari pengulangan kode. Fungsi umumnya memerlukan masukan yang disebut parameter, memproses masukan tersebut, dan memberikan hasil akhir berupa nilai balik (return value).
-
-## D.	Prosedure
-###     Prosedur adalah sebutan untuk fungsi yang tidak mengembalikan nilai akhir, yang dalam bahasa C++ dideklarasikan dengan tipe void. Prosedur hanya mengeksekusi instruksi atau tugas tertentu yang ada di dalam blok kodenya tanpa memberikan return value kepada pemanggilnya.
-
-## E.   Parameter Fungsi
-###     Parameter adalah nilai masukan untuk fungsi atau prosedur, yang terbagi menjadi parameter formal (variabel saat fungsi didefinisikan) dan parameter aktual (nilai saat fungsi dipanggil). Terdapat tiga metode pengiriman parameter: Call by Value (menyalin nilai, tidak mengubah variabel asli), Call by Pointer (mengirim alamat memori untuk mengubah nilai variabel asli menggunakan pointer), dan Call by Reference (mengirim alamat melalui referensi rujukan untuk mengubah nilai asli tanpa simbol pointer tambahan saat pemanggilan). 
 
 
 # GUIDED 1
@@ -234,13 +229,69 @@ int main(){
 #### - fungsi/prosedur yang menampilkan isi sebuah array integer 2D
 #### - fungsi/prosedur yang akan menukarkan isi dari 2 array integer 2D pada posisi tertentu
 #### - fungsi/prosedur yang akan menukarkan isi dari variabel yang ditunjuk oleh 2 buah pointer
+
 ### source code unguided 3
 ```cpp
+#include <iostream>
+using namespace std;
 
-#
+void tampilArray(int arr[3][3]){
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+void tukarIsiArray(int arr1[3][3], int arr2[3][3], int row, int col){
+    int temp = arr1[row][col];
+    arr1[row][col] = arr2[row][col];
+    arr2[row][col] = temp;
+}
+
+void tukarPointer(int *ptr1, int *ptr2){
+    int temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+}
+
+int main(){
+    int array1[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int array2[3][3] = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+
+    int var1 = 15, var2 = 50;
+    int *p1 = &var1;
+    int *p2 = &var2;
+
+    cout << "=== SEBELUM DITUKAR ===" << endl;
+    cout << "Array 1:" << endl;
+    tampilArray(array1);
+    cout << "Array 2:" << endl;
+    tampilArray(array2);
+    tukarIsiArray(array1, array2, 1, 1);
+
+    cout << "\n=== SESUDAH ARRAY DITUKAR (Posisi [1][1]) ===" << endl;
+    cout << "Array 1:" << endl;
+    tampilArray(array1);
+    cout << "Array 2:" << endl;
+    tampilArray(array2);
+
+    cout << "\n-----------------------------------" << endl;
+
+    cout << "=== SEBELUM POINTER DITUKAR ===" << endl;
+    cout << "Isi P1 = " << *p1 << ", Isi P2 = " << *p2 << endl;
+    
+    tukarPointer(p1, p2);
+
+    cout << "\n=== SESUDAH POINTER DITUKAR ===" << endl;
+    cout << "Isi P1 = " << *p1 << ", Isi P2 = " << *p2 << endl;
+
+    return 0;
+}
 ```
 ### Output Unguided 3 :
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/STRUKTUR_DATA/blob/main/MODUL02/OUTPUT/soal3.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/OUTPUT/SOAL3.png)
 
 
 ### penjelasan unguided 3
@@ -248,7 +299,7 @@ int main(){
 
 
 # Kesimpulan
-[]
+[Kesimpulan dari praktikum ini adalah pentingnya pemahaman mengenai tipe data bentukan dan modularitas program. Melalui penerapan Abstract Data Type (ADT), kita belajar bahwa memecah kode program menjadi beberapa file terpisah (seperti header .h dan body .cpp) membuat kode jauh lebih rapi, terstruktur, dan mudah untuk dikembangkan. Selain itu, penggunaan struct yang dipadukan dengan array terbukti sangat efektif untuk mengelompokkan dan menyimpan banyak data sekaligus secara efisien. Praktikum ini juga melatih kita dalam memanfaatkan fungsi, prosedur, dan pointer untuk memecah logika yang rumit serta memanipulasi data di dalam memori secara langsung, yang semuanya merupakan bekal penting untuk pengembangan perangkat lunak di dunia nyata.]
 
 
 ### Referensi
