@@ -291,7 +291,7 @@ int main(){
 }
 ```
 ### Output Unguided 3 :
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/OUTPUT/SOAL3.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/output/SOAL3.png)
 
 
 ### penjelasan unguided 3
