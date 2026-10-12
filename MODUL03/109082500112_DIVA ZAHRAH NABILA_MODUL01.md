@@ -152,9 +152,9 @@ int main(){
 }
 ```
 ### Output 1
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/output/SOAL1.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/output/SOAL1.png)
 
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/output/SOAL1(JAM).png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/output/SOAL1(JAM).png)
 
 
 ### penjelasan unguided 1
@@ -213,11 +213,11 @@ int main(){
 }
 ```
 ### Output Unguided 2 :
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/output/pelajaran.h.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/output/pelajaran.h.png)
 
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/output/pelajaran.cpp.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/output/pelajaran.cpp.png)
 
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/output/SOAL2.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/output/SOAL2.png)
 
 
 
@@ -291,7 +291,7 @@ int main(){
 }
 ```
 ### Output Unguided 3 :
-![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/StrukturData_Modul3/OUTPUT/SOAL3.png)
+![Screenshot Output Unguided 1_!] (https://github.com/divazhraa/StrukturData_Modul3/blob/main/MODUL03/OUTPUT/SOAL3.png)
 
 
 ### penjelasan unguided 3
